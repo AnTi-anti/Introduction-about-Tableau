@@ -1,0 +1,507 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10500.17.1226.1925                               -->
+<workbook original-version='10.5' source-build='10.5.0 (10500.17.1226.1925)' source-platform='win' version='10.5' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (中国电影网电影_data)' inline='true' name='federated.09gn6h41hhlz71107ih551mfmevt' version='10.5'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='中国电影网电影_data' name='excel-direct.1taefeq134rrs8139ok0b10bqkju'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='E:/book/电子书/数据分析/Tableau/资料/数据集/中国电影网电影_data.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1taefeq134rrs8139ok0b10bqkju' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:I3142:no:A1:I3142:0' header='yes' outcome='2'>
+            <column datatype='string' name='电影名' ordinal='0' />
+            <column datatype='string' name='累计票房' ordinal='1' />
+            <column datatype='string' name='导演' ordinal='2' />
+            <column datatype='string' name='主演' ordinal='3' />
+            <column datatype='date' date-parse-format='yyyy-MM-dd（中国）' name='上映时间' ordinal='4' />
+            <column datatype='string' name='国家及地区' ordinal='5' />
+            <column datatype='string' name='发行公司' ordinal='6' />
+            <column datatype='string' name='类型' ordinal='7' />
+            <column datatype='string' name='链接' ordinal='8' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:I3142:no:A1:I3142:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>电影名</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[电影名]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>电影名</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>累计票房</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[累计票房]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>累计票房</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>导演</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[导演]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>导演</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>主演</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[主演]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>主演</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>上映时间</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[上映时间]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>上映时间</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>国家及地区</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[国家及地区]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>国家及地区</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>发行公司</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[发行公司]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>发行公司</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>类型</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[类型]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>类型</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>链接</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[链接]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>链接</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='类型1' datatype='string' name='[类型 - 拆分 1]' role='dimension' type='nominal' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.09gn6h41hhlz71107ih551mfmevt].[类型]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [类型], &quot;/&quot;, 1 ) )' />
+      </column>
+      <column caption='累计票房(万)' datatype='real' name='[累计票房 - 拆分 1]' role='measure' type='quantitative' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.09gn6h41hhlz71107ih551mfmevt].[累计票房]'>
+        <calculation class='tableau' formula='FLOAT( SPLIT( SPLIT( SPLIT( SPLIT( SPLIT( [累计票房], &quot;累&quot;, 2 ), &quot;计&quot;, 2 ), &quot;票&quot;, 2 ), &quot;房&quot;, 2 ), &quot;万&quot;, 1 ) )' />
+      </column>
+      <column datatype='string' hidden='true' name='[累计票房]' role='dimension' type='nominal' />
+      <column-instance column='[类型 - 拆分 1]' derivation='None' name='[none:类型 - 拆分 1:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.64071' measure-ordering='alphabetic' measure-percentage='0.35929' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:类型 - 拆分 1:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;家庭&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;悬疑&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;都市&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;真人秀&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;军旅&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;惊悚&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;儿童&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;晚会&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;爱情&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;艺术片&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;励志&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;古装&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;科幻&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;恐怖&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;奇幻&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;喜剧&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;警匪&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;纪录片&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;动画&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;灾难&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;历史&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;剧情&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;动作&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;战争&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;China&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='不同类型电影数量与票房树形图'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>首先画出不同类型电影数量树形图，在其基础上添加票房，从多个维度显示数据。</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (中国电影网电影_data)' name='federated.09gn6h41hhlz71107ih551mfmevt' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09gn6h41hhlz71107ih551mfmevt'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[类型 - 拆分 1]' derivation='None' name='[none:类型 - 拆分 1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[累计票房 - 拆分 1]' derivation='Sum' name='[sum:累计票房 - 拆分 1:qk]' pivot='key' type='quantitative' />
+            <column caption='类型1' datatype='string' name='[类型 - 拆分 1]' role='dimension' type='nominal' user:SplitFieldIndex='2' user:SplitFieldOrigin='[federated.09gn6h41hhlz71107ih551mfmevt].[类型]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( [类型], &quot;/&quot;, 1 ) )' />
+            </column>
+            <column datatype='string' name='[类型]' role='dimension' type='nominal' />
+            <column caption='累计票房(万)' datatype='real' name='[累计票房 - 拆分 1]' role='measure' type='quantitative' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.09gn6h41hhlz71107ih551mfmevt].[累计票房]'>
+              <calculation class='tableau' formula='FLOAT( SPLIT( SPLIT( SPLIT( SPLIT( SPLIT( [累计票房], &quot;累&quot;, 2 ), &quot;计&quot;, 2 ), &quot;票&quot;, 2 ), &quot;房&quot;, 2 ), &quot;万&quot;, 1 ) )' />
+            </column>
+            <column datatype='string' hidden='true' name='[累计票房]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.09gn6h41hhlz71107ih551mfmevt].[sum:累计票房 - 拆分 1:qk]' value='n#,##0,K;-#,##0,K' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.09gn6h41hhlz71107ih551mfmevt].[sum:累计票房 - 拆分 1:qk]' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.09gn6h41hhlz71107ih551mfmevt].[sum:累计票房 - 拆分 1:qk]' />
+              <size column='[federated.09gn6h41hhlz71107ih551mfmevt].[sum:Number of Records:qk]' />
+              <text column='[federated.09gn6h41hhlz71107ih551mfmevt].[none:类型 - 拆分 1:nk]' />
+              <text column='[federated.09gn6h41hhlz71107ih551mfmevt].[sum:累计票房 - 拆分 1:qk]' />
+              <text column='[federated.09gn6h41hhlz71107ih551mfmevt].[sum:Number of Records:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.09gn6h41hhlz71107ih551mfmevt].[none:类型 - 拆分 1:nk]</run>
+                <run>&gt;&#10;票房：&lt;</run>
+                <run>[federated.09gn6h41hhlz71107ih551mfmevt].[sum:累计票房 - 拆分 1:qk]</run>
+                <run>&gt;&#10;电影数量：&lt;</run>
+                <run>[federated.09gn6h41hhlz71107ih551mfmevt].[sum:Number of Records:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='不同类型电影数量与票房树形图'>
+      <cards>
+        <edge name='left'>
+          <strip size='250'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='250'>
+            <card pane-specification-id='0' param='[federated.09gn6h41hhlz71107ih551mfmevt].[sum:累计票房 - 拆分 1:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='118'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.09gn6h41hhlz71107ih551mfmevt].[none:类型 - 拆分 1:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='不同类型电影数量与票房树形图' width='192'>
+      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
+      AAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
