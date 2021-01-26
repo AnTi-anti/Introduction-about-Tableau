@@ -1,0 +1,824 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10500.17.1226.1925                               -->
+<workbook original-version='10.5' source-build='10.5.0 (10500.17.1226.1925)' source-platform='win' version='10.5' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='人员+ (全球超市订单数据)' inline='true' name='federated.141ns5m1khf3cl13m8qyq0nm8qxn' version='10.5'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='全球超市订单数据' name='excel-direct.1pmva3r0t20m891dl00ev0c9p7sn'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='E:/book/电子书/数据分析/Tableau/资料/数据集/全球超市订单数据.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[人员].[地区]' />
+              <expression op='[订单].[地区]' />
+            </expression>
+          </clause>
+          <relation connection='excel-direct.1pmva3r0t20m891dl00ev0c9p7sn' name='人员' table='[人员$]' type='table'>
+            <columns gridOrigin='A1:B25:no:A1:B25:0' header='yes' outcome='6'>
+              <column datatype='string' name='珀森' ordinal='0' />
+              <column datatype='string' name='地区' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1pmva3r0t20m891dl00ev0c9p7sn' name='订单' table='[订单$]' type='table'>
+            <columns gridOrigin='A1:X10001:no:A1:X10001:0' header='yes' outcome='6'>
+              <column datatype='integer' name='行 ID' ordinal='0' />
+              <column datatype='string' name='订单 ID' ordinal='1' />
+              <column datatype='date' name='订购日期' ordinal='2' />
+              <column datatype='date' name='装运日期' ordinal='3' />
+              <column datatype='string' name='装运方式' ordinal='4' />
+              <column datatype='string' name='客户 ID' ordinal='5' />
+              <column datatype='string' name='客户名称' ordinal='6' />
+              <column datatype='string' name='细分市场' ordinal='7' />
+              <column datatype='integer' name='邮政编码 (Postal Code)' ordinal='8' />
+              <column datatype='string' name='城市 (City)' ordinal='9' />
+              <column datatype='string' name='省/市/自治区 (State/Province)' ordinal='10' />
+              <column datatype='string' name='国家/地区 (Country)' ordinal='11' />
+              <column datatype='string' name='地区' ordinal='12' />
+              <column datatype='string' name='市场' ordinal='13' />
+              <column datatype='string' name='产品 ID' ordinal='14' />
+              <column datatype='string' name='类别' ordinal='15' />
+              <column datatype='string' name='子类别' ordinal='16' />
+              <column datatype='string' name='产品名称' ordinal='17' />
+              <column datatype='real' name='销售额' ordinal='18' />
+              <column datatype='integer' name='数量' ordinal='19' />
+              <column datatype='real' name='折扣' ordinal='20' />
+              <column datatype='real' name='利润' ordinal='21' />
+              <column datatype='real' name='装运成本' ordinal='22' />
+              <column datatype='string' name='订单优先级' ordinal='23' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[产品 ID]' value='[订单].[产品 ID]' />
+          <map key='[产品名称]' value='[订单].[产品名称]' />
+          <map key='[利润]' value='[订单].[利润]' />
+          <map key='[国家/地区 (Country)]' value='[订单].[国家/地区 (Country)]' />
+          <map key='[地区 (订单)]' value='[订单].[地区]' />
+          <map key='[地区]' value='[人员].[地区]' />
+          <map key='[城市 (City)]' value='[订单].[城市 (City)]' />
+          <map key='[子类别]' value='[订单].[子类别]' />
+          <map key='[客户 ID]' value='[订单].[客户 ID]' />
+          <map key='[客户名称]' value='[订单].[客户名称]' />
+          <map key='[市场]' value='[订单].[市场]' />
+          <map key='[折扣]' value='[订单].[折扣]' />
+          <map key='[数量]' value='[订单].[数量]' />
+          <map key='[珀森]' value='[人员].[珀森]' />
+          <map key='[省/市/自治区 (State/Province)]' value='[订单].[省/市/自治区 (State/Province)]' />
+          <map key='[类别]' value='[订单].[类别]' />
+          <map key='[细分市场]' value='[订单].[细分市场]' />
+          <map key='[行 ID]' value='[订单].[行 ID]' />
+          <map key='[装运成本]' value='[订单].[装运成本]' />
+          <map key='[装运方式]' value='[订单].[装运方式]' />
+          <map key='[装运日期]' value='[订单].[装运日期]' />
+          <map key='[订单 ID]' value='[订单].[订单 ID]' />
+          <map key='[订单优先级]' value='[订单].[订单优先级]' />
+          <map key='[订购日期]' value='[订单].[订购日期]' />
+          <map key='[邮政编码 (Postal Code)]' value='[订单].[邮政编码 (Postal Code)]' />
+          <map key='[销售额]' value='[订单].[销售额]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>珀森</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[珀森]</local-name>
+            <parent-name>[人员]</parent-name>
+            <remote-alias>珀森</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>地区</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[地区]</local-name>
+            <parent-name>[人员]</parent-name>
+            <remote-alias>地区</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[人员]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B25:no:A1:B25:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>行 ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[行 ID]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>行 ID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>订单 ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[订单 ID]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>订单 ID</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>订购日期</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[订购日期]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>订购日期</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>装运日期</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[装运日期]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>装运日期</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>装运方式</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[装运方式]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>装运方式</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>客户 ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[客户 ID]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>客户 ID</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>客户名称</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[客户名称]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>客户名称</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>细分市场</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[细分市场]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>细分市场</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>邮政编码 (Postal Code)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[邮政编码 (Postal Code)]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>邮政编码 (Postal Code)</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>城市 (City)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[城市 (City)]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>城市 (City)</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>省/市/自治区 (State/Province)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[省/市/自治区 (State/Province)]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>省/市/自治区 (State/Province)</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>国家/地区 (Country)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[国家/地区 (Country)]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>国家/地区 (Country)</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>地区</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[地区 (订单)]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>地区</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>市场</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[市场]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>市场</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>产品 ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[产品 ID]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>产品 ID</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>类别</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[类别]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>类别</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>子类别</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[子类别]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>子类别</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>产品名称</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[产品名称]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>产品名称</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>销售额</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[销售额]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>销售额</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>数量</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[数量]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>数量</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>折扣</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[折扣]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>折扣</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>利润</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[利润]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>利润</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>装运成本</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[装运成本]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>装运成本</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>订单优先级</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[订单优先级]</local-name>
+            <parent-name>[订单]</parent-name>
+            <remote-alias>订单优先级</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[订单]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:X10001:no:A1:X10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[产品名称]' role='dimension' type='nominal' />
+      <column datatype='real' name='[利润]' role='measure' type='quantitative' />
+      <column datatype='string' name='[国家/地区 (Country)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[地区 (订单)]' role='dimension' type='nominal' />
+      <column datatype='string' name='[城市 (City)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[市场]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[数量]' role='measure' type='quantitative' />
+      <column datatype='string' name='[省/市/自治区 (State/Province)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='string' name='[细分市场]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[行 ID]' role='dimension' type='ordinal' />
+      <column datatype='integer' default-format='*00000' name='[邮政编码 (Postal Code)]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column-instance column='[地区 (订单)]' derivation='None' name='[none:地区 (订单):nk]' pivot='key' type='nominal' />
+      <group name='[亚洲地区]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[none:地区 (订单):nk]' member='&quot;东南亚&quot;' />
+          <groupfilter function='member' level='[none:地区 (订单):nk]' member='&quot;东亚&quot;' />
+          <groupfilter function='member' level='[none:地区 (订单):nk]' member='&quot;南亚&quot;' />
+          <groupfilter function='member' level='[none:地区 (订单):nk]' member='&quot;西亚&quot;' />
+          <groupfilter function='member' level='[none:地区 (订单):nk]' member='&quot;中亚&quot;' />
+        </groupfilter>
+      </group>
+      <group name='[负利润产品]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter expression='SUM([利润]) &lt;= 0.' function='filter' user:ui-filter-by-field='true' user:ui-marker='filter-by'>
+          <groupfilter function='level-members' level='[产品名称]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+        </groupfilter>
+      </group>
+      <group name='[负利润国家2]' name-style='unqualified' user:ui-builder='lasso-group'>
+        <groupfilter function='reorder-dimensionality'>
+          <groupfilter function='union'>
+            <groupfilter function='crossjoin'>
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[细分市场]' member='&quot;公司&quot;' />
+                <groupfilter function='member' level='[细分市场]' member='&quot;家庭办公室&quot;' />
+              </groupfilter>
+              <groupfilter function='union'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[市场]' member='&quot;非洲&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;津巴布韦&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;尼日利亚&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;乌干达&quot;' />
+                  </groupfilter>
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[市场]' member='&quot;拉丁美洲&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;阿根廷&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;巴拿马&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;多米尼加共和国&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;海地&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;洪都拉斯&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;秘鲁&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;委内瑞拉&quot;' />
+                  </groupfilter>
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[市场]' member='&quot;欧洲&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;爱尔兰&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;丹麦&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;荷兰&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;立陶宛&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;葡萄牙&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;瑞典&quot;' />
+                  </groupfilter>
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[市场]' member='&quot;亚太地区&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;巴基斯坦&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;菲律宾&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;哈萨克斯坦&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;韩国&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;缅甸&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;泰国&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;土耳其&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;土库曼斯坦&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;也门&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;越南&quot;' />
+                  </groupfilter>
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+            <groupfilter function='crossjoin'>
+              <groupfilter function='member' level='[细分市场]' member='&quot;消费者&quot;' />
+              <groupfilter function='union'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[市场]' member='&quot;非洲&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;津巴布韦&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;尼日利亚&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;乌干达&quot;' />
+                  </groupfilter>
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[市场]' member='&quot;拉丁美洲&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;阿根廷&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;巴拿马&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;多米尼加共和国&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;海地&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;洪都拉斯&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;秘鲁&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;委内瑞拉&quot;' />
+                  </groupfilter>
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[市场]' member='&quot;欧洲&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;爱尔兰&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;丹麦&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;荷兰&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;立陶宛&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;葡萄牙&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;瑞典&quot;' />
+                  </groupfilter>
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[市场]' member='&quot;亚太地区&quot;' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;阿拉伯联合酋长国&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;巴基斯坦&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;菲律宾&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;哈萨克斯坦&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;韩国&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;缅甸&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;泰国&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;土耳其&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;土库曼斯坦&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;也门&quot;' />
+                    <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;越南&quot;' />
+                  </groupfilter>
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </groupfilter>
+          <order>
+            <hierarchy name='[国家/地区 (Country)]' />
+            <hierarchy name='[市场]' />
+            <hierarchy name='[细分市场]' />
+          </order>
+        </groupfilter>
+      </group>
+      <group name='[负利润国家]' name-style='unqualified' user:ui-builder='lasso-group'>
+        <groupfilter function='union'>
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;阿根廷&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;爱尔兰&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;巴基斯坦&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;巴拿马&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;丹麦&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;多米尼加共和国&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;菲律宾&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;哈萨克斯坦&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;海地&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;韩国&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;荷兰&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;洪都拉斯&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;津巴布韦&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;立陶宛&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;秘鲁&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;缅甸&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;尼日利亚&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;葡萄牙&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;瑞典&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;泰国&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;土耳其&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;土库曼斯坦&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;委内瑞拉&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;乌干达&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;也门&quot;' />
+          <groupfilter function='member' level='[国家/地区 (Country)]' member='&quot;越南&quot;' />
+        </groupfilter>
+      </group>
+      <group name='[销量TOP100]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter count='100' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+          <groupfilter direction='DESC' expression='SUM([数量])' function='order' user:ui-marker='order'>
+            <groupfilter function='level-members' level='[产品名称]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+          </groupfilter>
+        </groupfilter>
+      </group>
+      <group caption='卖情怀的产品' delimiter=',' name='[集 1]' name-style='unqualified'>
+        <groupfilter function='intersection'>
+          <groupfilter field='[负利润产品]' function='reference' />
+          <groupfilter field='[销量TOP100]' function='reference' />
+        </groupfilter>
+      </group>
+      <drill-paths>
+        <drill-path name='亚洲市场'>
+          <field>[市场]</field>
+          <field>[亚洲地区]</field>
+        </drill-path>
+      </drill-paths>
+      <layout dim-ordering='alphabetic' dim-percentage='0.4' group-percentage='0.24' measure-ordering='alphabetic' measure-percentage='0.36' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;China&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='创建集-负利润产品'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>【功能】创建负利润产品&#10;1.右键【产品名称】，创建【集】，【条件】按字段，小于等于0，重命名【负利润产品】，关闭，则可以查看哪些利润为负值的产品。&#10;2.具体查看产品，在【行】右键点击【在集内显示成员】，那么只显示要求的部分。</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='人员+ (全球超市订单数据)' name='federated.141ns5m1khf3cl13m8qyq0nm8qxn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.141ns5m1khf3cl13m8qyq0nm8qxn'>
+            <column-instance column='[负利润产品]' derivation='InOut' name='[io:负利润产品:nk]' pivot='key' type='nominal' />
+            <column-instance column='[利润]' derivation='Sum' name='[sum:利润:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[产品名称]' role='dimension' type='nominal' />
+            <column datatype='real' name='[利润]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.141ns5m1khf3cl13m8qyq0nm8qxn].[io:负利润产品:nk]</rows>
+        <cols>[federated.141ns5m1khf3cl13m8qyq0nm8qxn].[sum:利润:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='创建集-负利润产品'>
+      <cards>
+        <edge name='left'>
+          <strip size='250'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='147'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.141ns5m1khf3cl13m8qyq0nm8qxn].[io:负利润产品:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='127' name='创建集-负利润产品' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
