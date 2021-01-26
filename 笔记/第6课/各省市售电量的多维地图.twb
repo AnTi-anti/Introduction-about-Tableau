@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10500.17.1226.1925                               -->
+<workbook original-version='10.5' source-build='10.5.0 (10500.17.1226.1925)' source-platform='win' version='10.5' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='示例数据 (2014年各省市售电量)' inline='true' name='federated.0ou09xe0bzqz5e1fz7it10df6aec' version='10.5'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='2014年各省市售电量' name='excel-direct.0mrkmjo177tzy310ql8mn0rywxl2'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='E:/book/电子书/数据分析/Tableau/资料/数据集/2014年各省市售电量.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0mrkmjo177tzy310ql8mn0rywxl2' name='示例数据' table='[示例数据$]' type='table'>
+          <columns gridOrigin='A1:I7424:no:A1:I7424:0' header='yes' outcome='2'>
+            <column datatype='string' name='省市' ordinal='0' />
+            <column datatype='string' name='地市' ordinal='1' />
+            <column datatype='date' name='统计周期' ordinal='2' />
+            <column datatype='string' name='用电类别' ordinal='3' />
+            <column datatype='real' name='当期值' ordinal='4' />
+            <column datatype='real' name='累计值' ordinal='5' />
+            <column datatype='real' name='同期值' ordinal='6' />
+            <column datatype='real' name='同期累计值' ordinal='7' />
+            <column datatype='real' name='月度计划值' ordinal='8' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>省市</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[省市]</local-name>
+            <parent-name>[示例数据]</parent-name>
+            <remote-alias>省市</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>地市</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[地市]</local-name>
+            <parent-name>[示例数据]</parent-name>
+            <remote-alias>地市</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>统计周期</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[统计周期]</local-name>
+            <parent-name>[示例数据]</parent-name>
+            <remote-alias>统计周期</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>用电类别</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[用电类别]</local-name>
+            <parent-name>[示例数据]</parent-name>
+            <remote-alias>用电类别</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>当期值</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[当期值]</local-name>
+            <parent-name>[示例数据]</parent-name>
+            <remote-alias>当期值</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>累计值</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[累计值]</local-name>
+            <parent-name>[示例数据]</parent-name>
+            <remote-alias>累计值</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>同期值</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[同期值]</local-name>
+            <parent-name>[示例数据]</parent-name>
+            <remote-alias>同期值</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>同期累计值</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[同期累计值]</local-name>
+            <parent-name>[示例数据]</parent-name>
+            <remote-alias>同期累计值</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>月度计划值</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[月度计划值]</local-name>
+            <parent-name>[示例数据]</parent-name>
+            <remote-alias>月度计划值</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[示例数据]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:I7424:no:A1:I7424:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[地市]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[省市]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+        <semantic-values semantic-role='[State].[Name]'>
+          <semantic-value key='&quot;冀北&quot;' value='&quot;河北省&quot;' />
+          <semantic-value key='&quot;龙江&quot;' value='&quot;黑龙江省&quot;' />
+          <semantic-value key='&quot;蒙东&quot;' value='&quot;内蒙古&quot;' />
+        </semantic-values>
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.416667' measure-ordering='alphabetic' measure-percentage='0.583333' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;China&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='各省市售电量的多维地图'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='示例数据 (2014年各省市售电量)' name='federated.0ou09xe0bzqz5e1fz7it10df6aec' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0ou09xe0bzqz5e1fz7it10df6aec'>
+            <column-instance column='[用电类别]' derivation='None' name='[none:用电类别:nk]' pivot='key' type='nominal' />
+            <column-instance column='[省市]' derivation='None' name='[none:省市:nk]' pivot='key' type='nominal' />
+            <column-instance column='[统计周期]' derivation='Quarter' name='[qr:统计周期:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[当期值]' derivation='Sum' name='[sum:当期值:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[统计周期]' derivation='Year' name='[yr:统计周期:ok]' pivot='key' type='ordinal' />
+            <column datatype='real' name='[当期值]' role='measure' type='quantitative' />
+            <column datatype='string' name='[用电类别]' role='dimension' type='nominal' />
+            <column datatype='string' name='[省市]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+              <semantic-values semantic-role='[State].[Name]'>
+                <semantic-value key='&quot;冀北&quot;' value='&quot;河北省&quot;' />
+                <semantic-value key='&quot;龙江&quot;' value='&quot;黑龙江省&quot;' />
+                <semantic-value key='&quot;蒙东&quot;' value='&quot;内蒙古&quot;' />
+              </semantic-values>
+            </column>
+            <column datatype='date' name='[统计周期]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <sort class='manual' column='[federated.0ou09xe0bzqz5e1fz7it10df6aec].[none:用电类别:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;大工业&quot;</bucket>
+              <bucket>&quot;商业&quot;</bucket>
+              <bucket>&quot;电厂直供&quot;</bucket>
+              <bucket>&quot;趸售&quot;</bucket>
+              <bucket>&quot;非居民&quot;</bucket>
+              <bucket>&quot;非普工业&quot;</bucket>
+              <bucket>&quot;居民&quot;</bucket>
+              <bucket>&quot;农业&quot;</bucket>
+              <bucket>&quot;其他&quot;</bucket>
+              <bucket>&quot;汇总&quot;</bucket>
+            </dictionary>
+          </sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.0ou09xe0bzqz5e1fz7it10df6aec].[none:用电类别:nk]' value='bold' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0ou09xe0bzqz5e1fz7it10df6aec].[sum:当期值:qk]' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='false' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ou09xe0bzqz5e1fz7it10df6aec].[sum:当期值:qk]' />
+              <lod column='[federated.0ou09xe0bzqz5e1fz7it10df6aec].[none:省市:nk]' />
+              <geometry column='[federated.0ou09xe0bzqz5e1fz7it10df6aec].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>(([federated.0ou09xe0bzqz5e1fz7it10df6aec].[yr:统计周期:ok] / [federated.0ou09xe0bzqz5e1fz7it10df6aec].[qr:统计周期:ok]) * [federated.0ou09xe0bzqz5e1fz7it10df6aec].[Latitude (generated)])</rows>
+        <cols>([federated.0ou09xe0bzqz5e1fz7it10df6aec].[none:用电类别:nk] * [federated.0ou09xe0bzqz5e1fz7it10df6aec].[Longitude (generated)])</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='各省市售电量的多维地图'>
+      <cards>
+        <edge name='left'>
+          <strip size='250'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ou09xe0bzqz5e1fz7it10df6aec].[none:用电类别:nk]</field>
+            <field>[federated.0ou09xe0bzqz5e1fz7it10df6aec].[none:省市:nk]</field>
+            <field>[federated.0ou09xe0bzqz5e1fz7it10df6aec].[yr:统计周期:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='各省市售电量的多维地图' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
