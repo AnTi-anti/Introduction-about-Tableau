@@ -1,4 +1,5 @@
-# Introduction-aboput-Tableau## 前言
+# Introduction-aboput-Tableau
+## 前言
 最近利用一周时间看完了B站上的[Tableau教程](https://www.bilibili.com/video/BV1E4411B7ef?p=14).了解到了许多不同绘图的绘制方法和一些自定义数据集、图形的技巧。
 
 总的来说，Tableau是一款比较好的可视化软件，如果是一些编程小白基于工作或者兴趣想要学习一些可视化的画图工具，那么这篇教程非常适合你，如果你还想更进一步，跳过工具的使用，直接输入数据就绘制高大上的可视化图形，那么百度做的[Echarts](https://echarts.apache.org/zh/index.html)非常适合你，基本上你能想到的要做的图形都可以在这里找到。
