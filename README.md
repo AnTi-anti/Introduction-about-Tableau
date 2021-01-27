@@ -1,4 +1,4 @@
-# Introduction-aboput-Tableau
+# Introduction-about-Tableau
 ## 前言
 最近利用一周时间看完了B站上的[Tableau教程](https://www.bilibili.com/video/BV1E4411B7ef?p=14).了解到了许多不同绘图的绘制方法和一些自定义数据集、图形的技巧。
 
